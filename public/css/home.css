@@ -1,0 +1,186 @@
+/* CONTAINER FOR PAGE */
+.insideContainer {
+  display: flex;
+  flex-direction: column;
+}
+/* NEXT: FIGURE OUT HOW THIS SHOULD BE DESIGNED, then design it*/
+/* INTRO SECTION */
+.intro {
+  padding: 20px;
+  height: 300px;
+  width: 80vw;
+  margin: 0 auto 200px;
+  display:inline-flex;
+  flex-direction: row;
+}
+
+/* left side of intro section */
+.intro .left{
+  flex-direction: column;
+}
+
+.intro .left{
+  width: 55%;
+}
+
+
+.intro h1 {
+  padding-left: 60px;
+  margin-bottom: 5px;
+}
+
+.intro h2 {
+  vertical-align: top;
+  margin-left: 70px;
+
+}
+
+.pinkdotsImage {
+  width: 200px;
+}
+
+/* right side of intro section */
+
+.intro .right {
+  margin-left: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.introImage {
+  height: 20em;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  margin-left: 60px;
+
+}
+
+.yellowBox {
+  background-color: var(--Mustard);
+  height: 20em;
+  width: 25em;
+  display: inline-flex;
+  z-index: -1;
+  position: absolute;
+  margin-left: 80px;
+}
+
+/* SLIDESHOW SECTION */
+.slideshow {
+  background-color: var(--Purple);
+  padding: 20px;
+  height: 300px;
+  width: 1000px;
+  position: relative;
+  margin: 0 auto 30px;
+  z-index: -1;
+  flex-direction: column;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation for dots */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1280px) {
+  .intro {
+    flex-direction: column;
+  }
+  .intro .left {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .intro .right {
+    margin: auto;
+  }
+  .yellowBox {
+    margin-left: -180px;
+  }
+  .introImage {
+    margin-left: -200px;
+  }
+  .slideshow {
+    margin-top: 230px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 770px) {
+  .slideshow {
+    margin-top: 330px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slideshow {
+    margin-top: 380px;
+  }
+}

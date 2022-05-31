@@ -1,0 +1,64 @@
+<%- include("partials/header"); -%>
+
+<div class="insideContainer">
+  <section class="intro">
+    <div class="left">
+      <h1 id="headline">Make your event pop!</h1>
+      <img src="/images/PinkDots.png" class="pinkdotsImage" alt="Pink dots">
+      <h2>Give your next event that luxury look with one of my balloon decoration
+        options. Each piece is custom made to fit your vision and sure to make your
+        decor POP!</h2>
+    </div>
+    <div class="right">
+      <div class="yellowBox"></div>
+      <img src="/images/image0.jpeg" class="introImage" alt="Teaser image, first birthday">
+    </div>
+  </section>
+
+  <section class="slideshow">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="img1.jpg" style="width:100%">
+      <div class="text">Caption One</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img2.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img3.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img4.jpg" style="width:100%">
+      <div class="text">Caption Four</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img5.jpg" style="width:100%">
+      <div class="text">Caption Five</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+  </section>
+
+</div>
+
+<%- include("partials/footer"); -%>
