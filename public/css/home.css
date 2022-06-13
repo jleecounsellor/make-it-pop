@@ -3,40 +3,45 @@
   display: flex;
   flex-direction: column;
 }
-/* NEXT: FIGURE OUT HOW THIS SHOULD BE DESIGNED, then design it*/
+
 /* INTRO SECTION */
 .intro {
   padding: 20px;
   height: 300px;
-  width: 80vw;
+  width: 85vw;
   margin: 0 auto 200px;
   display:inline-flex;
   flex-direction: row;
+  position: relative;
 }
 
 /* left side of intro section */
 .intro .left{
   flex-direction: column;
-}
-
-.intro .left{
   width: 55%;
 }
-
 
 .intro h1 {
   padding-left: 60px;
   margin-bottom: 5px;
+  position: relative;
+}
+
+.headline2 {
+  position: absolute;
+  top: -40px;
+  left: 170px;
 }
 
 .intro h2 {
   vertical-align: top;
   margin-left: 70px;
-
 }
 
 .pinkdotsImage {
   width: 200px;
+  position: absolute;
+  top: 160px;
 }
 
 /* right side of intro section */
@@ -59,7 +64,7 @@
 .yellowBox {
   background-color: var(--Mustard);
   height: 20em;
-  width: 25em;
+  width: 27em;
   display: inline-flex;
   z-index: -1;
   position: absolute;
@@ -69,12 +74,11 @@
 /* SLIDESHOW SECTION */
 .slideshow {
   background-color: var(--Purple);
-  padding: 20px 20px 20px 10px;
+  padding: 20px 20px 20px 0px;
   height: 400px;
   width: 1000px;
   position: relative;
   margin: 0 auto 30px;
-  /* z-index: -1; */
   flex-direction: column;
 }
 
@@ -89,7 +93,7 @@
 }
 
 .mySlides img:nth-child(1){
-  margin-left: 40px;
+  margin-left: 45px;
 }
 
 .mySlides img:nth-child(2){
@@ -111,7 +115,6 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  /* z-index: 1; */
 }
 
 /* Position the "next button" to the right */
@@ -119,6 +122,7 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -128,7 +132,7 @@
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 1.3em;
   padding: 8px 12px;
   position: absolute;
   bottom: 35px;
@@ -164,6 +168,55 @@
   to {opacity: 1}
 }
 
+/* FAQ and TESTIMONIAL */
+.colContainer {
+  display: flex;
+  width: 99%;
+  margin: auto;
+  flex-direction: row;
+}
+.col {
+  display: flex;
+  width: 20%;
+  padding: 20px;
+  flex-direction: column;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.col:nth-child(1), .col:nth-child(3), .col:nth-child(5) {
+  outline: dotted var(--Purple) 3px;
+  color: var(--Purple);
+}
+
+.col:nth-child(2), .col:nth-child(4), .col:nth-child(6) {
+  background-color: var(--Purple);
+  color: var(--Mustard);
+}
+
+.col:nth-child(2) h2, .col:nth-child(4) h2, .col:nth-child(6) h2  {
+  color: var(--Mustard);
+}
+
+/* ABOUT ME */
+.aboutMe {
+  background-image: url(/images/MoonGate1_revised.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1280px auto;
+  background-attachment: fixed;
+}
+
+.aboutMe div {
+  width: 400px;
+  height: 800px;
+  padding: 0 50px 50px;
+  text-align: left;
+  margin: auto;
+  background-color: white;
+
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1280px) {
   .intro {
@@ -184,19 +237,46 @@
   }
   .slideshow {
     margin-top: 230px;
+  }
+  .colContainer {
+    margin-top: 280px;
+    flex-direction: column;
     width: 90%;
+  }
+  .col {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .slideshow {
+    width:80%;
+    height: 45%;
+    margin-top: 250px;
+  }
+  .mySlides img:nth-child(1) {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 20px;
+  }
+  .mySlides img:nth-child(2) {
+    display: none;
+  }
+  .dot {
+    margin: 0;
+  }
+  .colContainer {
+    margin-top: 350px;
+    margin-left: 20px;
+    margin-right:10px;
   }
 }
 
 @media (max-width: 770px) {
   .slideshow {
-    margin-top: 330px;
-    width: 80%;
-  }
-}
-
-@media (max-width: 600px) {
-  .slideshow {
     margin-top: 380px;
+  }
+  .colContainer {
+    margin-top: 420px;
   }
 }
