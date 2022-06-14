@@ -35,11 +35,11 @@ p {
 
 a {
   text-decoration: none;
-  font-size: 1em;
 }
 
 li {
   list-style: none;
+  Font-size: 1em;
 }
 
 /* Container for every page */
@@ -67,6 +67,12 @@ li {
 /* logo */
 .logo {
   padding: 5px;
+  position: relative;
+}
+
+.tagline {
+  position: absolute;
+  left: 65px;
 }
 
 /* navbar menu */
@@ -154,6 +160,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  background-color: var(--White);
 }
 
 .left, .right {
@@ -161,7 +168,7 @@ input[type=checkbox] {
 }
 
 .socialIcons {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .socialIcons a:hover {
@@ -217,5 +224,11 @@ input[type=checkbox] {
     padding: 15px 0;
     transform: translateX(35%);
     outline: solid var(--Mustard) 3px;
+  }
+}
+
+@media (max-width: 1020px) {
+  h1 {
+    font-size: 2.8em;
   }
 }

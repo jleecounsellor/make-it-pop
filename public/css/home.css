@@ -23,25 +23,43 @@
 
 .intro h1 {
   padding-left: 60px;
-  margin-bottom: 5px;
+  top: 15px;
   position: relative;
+  margin-bottom: 0;
 }
 
 .headline2 {
   position: absolute;
-  top: -40px;
-  left: 170px;
+  left: 130px;
+  margin-top: 0;
 }
 
 .intro h2 {
-  vertical-align: top;
   margin-left: 70px;
+  margin-top: 100px;
+  width: 580px;
 }
 
-.pinkdotsImage {
+.pinkDotsImage {
   width: 200px;
   position: absolute;
   top: 160px;
+  left: -10px;
+}
+
+.yellowDotsImage, .yellowDotsImage2, .yellowDotsImage3 {
+  position: absolute;
+  width: 100px;
+  left: 35vw;
+  z-index: -2;
+}
+
+.yellowDotsImage2 {
+  top: 395px;
+}
+
+.yellowDotsImage3 {
+  top: 795px;
 }
 
 /* right side of intro section */
@@ -58,7 +76,14 @@
   position: absolute;
   top: 20px;
   margin-left: 60px;
+}
 
+.introImage2 {
+  height: 20em;
+  z-index: 1;
+  position: absolute;
+  top: 400px;
+  margin-left: 60px;
 }
 
 .yellowBox {
@@ -69,6 +94,17 @@
   z-index: -1;
   position: absolute;
   margin-left: 80px;
+}
+
+.peachBox {
+  background-color: var(--Peach);
+  height: 20em;
+  width: 27em;
+  display: inline-flex;
+  z-index: -1;
+  position: absolute;
+  margin-left: 80px;
+  top: 380px;
 }
 
 /* SLIDESHOW SECTION */
@@ -109,7 +145,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: var(--White);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -131,7 +167,7 @@
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: var(--White);
   font-size: 1.3em;
   padding: 8px 12px;
   position: absolute;
@@ -187,6 +223,7 @@
 .col:nth-child(1), .col:nth-child(3), .col:nth-child(5) {
   outline: dotted var(--Purple) 3px;
   color: var(--Purple);
+  background-color: var(--White);
 }
 
 .col:nth-child(2), .col:nth-child(4), .col:nth-child(6) {
@@ -205,6 +242,8 @@
   background-position: center;
   background-size: 1280px auto;
   background-attachment: fixed;
+  margin-top: 5px;
+  position: relative;
 }
 
 .aboutMe div {
@@ -213,33 +252,48 @@
   padding: 0 50px 50px;
   text-align: left;
   margin: auto;
-  background-color: white;
+  background-color: var(--White);
 
+}
+.bioImage {
+  position: relative;
+  top: -60px;
+  left: 60px;
+}
+
+/* GARLANDS */
+.intro.garland {
+  margin-bottom: 480px;
+}
+.intro.garland.moon {
+  margin-bottom: 600px;
+}
+.left p{
+  position: relative;
+  left: 70px;
+  width: 580px;
+  height: 700px;
+  font-size: 1.2em;
+}
+.left li {
+  position: relative;
+  left: 70px;
+  color: var(--Purple);
+  font-size: 1.2em;
 }
 
 /* MEDIA QUERIES */
 @media (max-width: 1280px) {
-  .intro {
-    flex-direction: column;
-  }
   .intro .left {
-    width: 90%;
-    margin-bottom: 20px;
+      width: 70%;
   }
-  .intro .right {
-    margin: auto;
+  .yellowBox, .introImage, .peachBox, .introImage2 {
+    display: none;
   }
-  .yellowBox {
-    margin-left: -180px;
-  }
-  .introImage {
-    margin-left: -200px;
-  }
-  .slideshow {
-    margin-top: 230px;
+  .yellowDotsImage, .yellowDotsImage2 {
+    left: 15vw;
   }
   .colContainer {
-    margin-top: 280px;
     flex-direction: column;
     width: 90%;
   }
@@ -249,10 +303,18 @@
 }
 
 @media (max-width: 1040px) {
+  .intro .left {
+      width: 80%;
+  }
+  .left p{
+    width: 400px;
+  }
+  .yellowDotsImage, .yellowDotsImage2 {
+    left: 5vw;
+  }
   .slideshow {
     width:80%;
     height: 45%;
-    margin-top: 250px;
   }
   .mySlides img:nth-child(1) {
     width: 50%;
@@ -266,17 +328,16 @@
     margin: 0;
   }
   .colContainer {
-    margin-top: 350px;
     margin-left: 20px;
     margin-right:10px;
   }
 }
 
-@media (max-width: 770px) {
-  .slideshow {
-    margin-top: 380px;
+@media (max-width: 1020px) {
+  .intro h1 {
+    top: 45px;
   }
-  .colContainer {
-    margin-top: 420px;
+  .left p, .intro h2{
+    width: 350px;
   }
 }
