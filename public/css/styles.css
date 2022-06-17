@@ -3,6 +3,8 @@
   --Mustard: #EAC484;
   --Peach: #F78DA7;
   --White: hsl(0, 0%, 100%);
+  --Grey: #9E9E9E;
+  accent-color: #F78DA7;
 }
 
 body {
@@ -156,6 +158,9 @@ input[type=checkbox] {
 }
 
 /* FOOTER STYLES */
+footer {
+  margin-top: 200px;
+}
 .footContainer {
   display: flex;
   justify-content: space-between;

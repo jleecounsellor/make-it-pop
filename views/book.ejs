@@ -7,12 +7,36 @@
       <h1 class="headline2"><br /></h1>
       <img src="/images/PinkDots.png" class="pinkDotsImage" alt="Pink dots">
       <h2>Book now to secure your spot for your upcoming event, no matter how far in advance!</h2>
-      <p>Please include the product you are interested in, your event date and any other details relevant to the build. I will contact you at my earliest convenience to discuss the event specifics and specific details to make your event a success. Booking your event as far in advance as possible is greatly advised to make sure your requested date is available. I look forward to helping you make your event one to remember!</p>
+      <p>Please include the product you are interested in, your event date and any other details relevant to the build. I will contact you at my earliest convenience to discuss the event specifics and specific details to make your event a success.
+        Booking your event as far in advance as possible is greatly advised to make sure your requested date is available. I look forward to helping you make your event one to remember!</p>
     </div>
     <div class="right">
       <img src="/images/YellowDots.jpg" class="yellowDotsImage" alt="Yellow dots">
       <img src="/images/YellowDots.jpg" class="yellowDotsImage2" alt="Yellow dots">
-      <img src="/images/YellowDots.jpg" class="yellowDotsImage3" alt="Yellow dots">
+      <!-- <img src="/images/YellowDots.jpg" class="yellowDotsImage3" alt="Yellow dots"> -->
+      <div class="formContainer">
+        <form id="form" autocomplete="off">
+          <input type="text" id="name" name="fname" value="" placeholder="Name"><br />
+          <input type="text" id="email" name="email" value="" placeholder="Email"><br />
+          <input type="text" id="subject" name="subject" value="" placeholder="Subject"><br />
+          <label for="date">Event date</label>
+          <input type="date" name="date" value="" id="eventDate">
+          <p>Product choices</p>
+          <input type="radio" name="productChoices" value="Standard Garland" id="standardGarland">
+          <label for"standardGarland">Standard Garland</label><br />
+          <input type="radio" name="productChoices" value="Luxury Garland" id="luxuryGarland">
+          <label for"luxuryGarland">Luxury Garland</label><br />
+          <input type="radio" name="productChoices" value="Moon Gate Garland" id="moonGateGarland">
+          <label for"moonGateGarland">Moon Gate Garland</label><br />
+          <input type="radio" name="productChoices" value="Rainbow Arch" id="rainbowArch">
+          <label for"rainbowArch">Rainbow Arch</label><br />
+          <input type="radio" name="productChoices" value="Balloon Mosaic" id="balloonMosaic">
+          <label for"balloonMosaic">Balloon Mosaic</label><br />
+          <textarea name"message" id="message" placeholder="Your Message"></textarea><br />
+          <input type="submit" formmethod="post" value="Send" id="submit" rows="15">
+
+
+      </form>
     </div>
   </section>
 

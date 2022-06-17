@@ -282,6 +282,72 @@
   font-size: 1.2em;
 }
 
+/* BOOK NOW */
+
+.formContainer {
+  border-radius: 5px;
+  background-color: #9E9E9E;
+  opacity: 0.8;
+  padding: 30px;
+  width: 500px;
+  height: 580px;
+}
+
+#eventDate, #message {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#name, #email, #subject, #message, #eventDate {
+  padding-left: 20px;
+  margin: 10px 0;
+  background-color: #F5F5F5;
+  color: black;
+  font-size: 1em;
+  border: 1px solid #CDD9ED;
+  border-radius: 5px;
+}
+
+#eventDate {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+#name, #email, #subject {
+  width: 95%;
+  height: 50px;
+}
+
+#message {
+  width: 92%;
+}
+
+textarea {
+  padding: 20px;
+  resize: none;
+  font-size: 1em;
+}
+
+input:focus, textarea:focus, input:hover, input:checked {
+  outline: 2px auto var(--Peach);
+  outline-offset: -2px;
+  color: var(--White);
+}
+
+::placeholder {
+  color: #9E9E9E;
+  font-size: 1em;
+}
+
+
+#submit {
+  color: var(--White);
+  background-color: var(--Purple);
+  border-radius: 5px;
+  padding: 14px 16px;
+  border: none;
+  font-size: 1.2em;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1280px) {
   .intro .left {
@@ -290,7 +356,7 @@
   .yellowBox, .introImage, .peachBox, .introImage2 {
     display: none;
   }
-  .yellowDotsImage, .yellowDotsImage2 {
+  .yellowDotsImage, .yellowDotsImage2, .yellowDotsImage3 {
     left: 15vw;
   }
   .colContainer {
@@ -302,6 +368,8 @@
   }
 }
 
+
+
 @media (max-width: 1040px) {
   .intro .left {
       width: 80%;
@@ -309,7 +377,7 @@
   .left p{
     width: 400px;
   }
-  .yellowDotsImage, .yellowDotsImage2 {
+  .yellowDotsImage, .yellowDotsImage2, .yellowDotsImage3 {
     left: 5vw;
   }
   .slideshow {
@@ -341,3 +409,28 @@
     width: 350px;
   }
 }
+
+
+/* Extra small devices */
+@media (max-width: 600px) {
+  .left {
+    width: 100%;
+  }
+  .intro h1 {
+    width: 120%;
+    /* font-size: 2.4em; */
+  }
+  .yellowDotsImage, .yellowDotsImage2, .yellowDotsImage3 {
+    display:none;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro h1  {
+    font-size: 10vw ;
+    top: 70px;
+  }
+  .left h2 {
+    width: 100%;
+    top: 90px;
+  }
