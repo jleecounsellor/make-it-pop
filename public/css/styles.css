@@ -159,7 +159,7 @@ input[type=checkbox] {
 
 /* FOOTER STYLES */
 footer {
-  margin-top: 200px;
+  margin-top: 50px;
 }
 .footContainer {
   display: flex;
@@ -235,5 +235,32 @@ footer {
 @media (max-width: 1020px) {
   h1 {
     font-size: 2.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar, .footContainer {
+    width: 110%;
+  }
+  .footContainer .left {
+    width: 50px;
+  }
+  .footContainer .right {
+    width: 265px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 110%;
+  }
+  .navbar, .footContainer {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar, .footContainer {
+    width: 130vw;
   }
 }
