@@ -316,7 +316,7 @@
 
 .formContainer {
   border-radius: 5px;
-  background-color: #9E9E9E;
+  background-color: var(--Grey);
   opacity: 0.8;
   padding: 30px;
   width: 500px;
@@ -331,11 +331,11 @@
 #name, #email, #subject, #message, #eventDate {
   padding-left: 20px;
   margin: 10px 0;
-  background-color: #F5F5F5;
-  color: black;
+  background-color: var(--LightGrey);
+  color: var(--Black);
   font-size: 1em;
-  border: 1px solid #CDD9ED;
   border-radius: 5px;
+  border-style: none;
 }
 
 #eventDate {
@@ -350,22 +350,18 @@
 
 #message {
   width: 92%;
-}
-
-textarea {
   padding: 20px;
   resize: none;
   font-size: 1em;
 }
 
-input:focus, textarea:focus, input:hover, input:checked {
+input:focus, input:hover, input:checked, #message:focus,#message:hover {
   outline: 2px auto var(--Peach);
   outline-offset: -2px;
-  color: var(--White);
 }
 
 ::placeholder {
-  color: #9E9E9E;
+  color: var(--DarkGrey);
   font-size: 1em;
 }
 

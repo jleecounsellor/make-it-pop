@@ -21,12 +21,12 @@
   </section>
   <section>
     <div class="formContainer">
-      <form id="form" autocomplete="off">
-        <input type="text" id="name" name="fname" value="" placeholder="Name"><br />
+      <form id="form" autocomplete="off" method="post">
+        <input type="text" id="name" name="name" value="" placeholder="Name"><br />
         <input type="text" id="email" name="email" value="" placeholder="Email"><br />
         <input type="text" id="subject" name="subject" value="" placeholder="Subject"><br />
         <label for="date">Event date</label>
-        <input type="date" name="date" value="" id="eventDate">
+        <input type="date" name="eventDate" value="" id="eventDate">
         <p>Product choices</p>
         <input type="radio" name="productChoices" value="Standard Garland" id="standardGarland">
         <label for"standardGarland">Standard Garland</label><br />
@@ -38,8 +38,8 @@
         <label for"rainbowArch">Rainbow Arch</label><br />
         <input type="radio" name="productChoices" value="Balloon Mosaic" id="balloonMosaic">
         <label for"balloonMosaic">Balloon Mosaic</label><br />
-        <textarea name"message" id="message" placeholder="Your Message"></textarea><br />
-        <input type="submit" formmethod="post" value="Send" id="submit" rows="15">
+        <textarea name="response" id="message" placeholder="Your Message" value=""></textarea><br />
+        <input type="submit" value="Send" id="submit" rows="15">
       </form>
     </div>
   </section>

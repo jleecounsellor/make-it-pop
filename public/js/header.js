@@ -63,10 +63,10 @@ const checkName = () => {
   const name = nameF.value.trim();
 
   if (isEmpty(name)) {
-    showError(nameF, "First name cannot be empty");
+    showError(nameF, "Name field cannot be empty");
     nameF.setAttribute("placeholder", '');
   } else if (!name.match(nameFormat)) {
-    showError(nameF, "Looks like it's not a first name");
+    showError(nameF, "Please enter a Name");
   } else {
     showSuccess(nameF);
   }
@@ -77,10 +77,10 @@ const checkEmail = () => {
   const email = emailF.value.trim();
 
   if (isEmpty(email)) {
-    showError(emailF, "Email cannot be empty");
+    showError(emailF, "Email field cannot be empty");
     emailF.setAttribute('placeholder', '');
   } else if (!isEmailValid(email)) {
-    showError(emailF, "Looks like it's not an email")
+    showError(emailF, "Must enter an Email")
     emailF.setAttribute('placeholder', 'email@example.com');
   } else {
     showSuccess(emailF);

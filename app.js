@@ -1,8 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-
 const app = express();
+const mongoose = require("mongoose");
+
+
+mongoose.connect("mongodb+srv://jamieleeg:aesBw39YZFnbGvU@cluster0.waagn.mongodb.net/makeitpopDB", {
+  useNewUrlParser: true
+});
+
+//create the schema
+const messageSchema = {
+  name: String,
+  email: String,
+  subject: String,
+  event: Date,
+  product: String,
+  response: String
+};
+
+//Posts collection
+const Message = mongoose.model("Message", messageSchema);
 
 app.set("view engine", "ejs");
 
@@ -62,6 +80,28 @@ app.get("/about", function(req, res){
 //book route
 app.get("/book", function(req, res){
   res.render("book");
+});
+
+//post route for book form
+app.post("/home", function(req, res){
+  res.render("home");
+});
+
+app.post("/book", function(req, res){
+
+  const message = new Message({
+    name: req.body.name,
+    email: req.body.email,
+    subject: req.body.subject,
+    event: req.body.eventDate,
+    product: req.body.productChoices,
+    response: req.body.response
+  });
+  message.save(function(err) {
+    if(!err){
+      res.redirect("/");
+    }
+  });
 });
 
 const PORT = process.env.PORT || 3000;

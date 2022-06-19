@@ -3,7 +3,10 @@
   --Mustard: #EAC484;
   --Peach: #F78DA7;
   --White: hsl(0, 0%, 100%);
+  --LightGrey: #F5F5F5;
   --Grey: #9E9E9E;
+  --DarkGrey: #505050;
+  --Black: #000000;
   accent-color: #F78DA7;
 }
 
