@@ -70,7 +70,7 @@ input:focus, input:hover, input:checked, #message:focus,#message:hover {
   width: 300px;
   height: 40px;
   padding-left: 15px;
-  left: 500px;
+  left: 40%;
   top: 100px;
 }
 
@@ -79,8 +79,15 @@ input:focus, input:hover, input:checked, #message:focus,#message:hover {
   top: 8px;
 }
 
+
+
 @media (max-width: 1040px) {
-  .formContainer {
-    margin-top: 200px;
+  .alertBox{
+    margin-top: 130px;
+  }
+}
+@media (max-width: 800px) {
+  .alert{
+    left: 15%;
   }
 }

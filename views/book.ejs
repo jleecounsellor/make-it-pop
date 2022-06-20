@@ -21,18 +21,19 @@
     </div>
   </section>
   <section>
-    <% if(typeof alert != 'undefined') { %>
-    <% alert.forEach(function(error) { %>
-    <div class="alert" role="alert">
-      <img src="images/icon-error.svg" class="errorIcon" alt="error" />
-      <%= error.msg %>
+    <div class="alertBox">
+      <% if(typeof alert != 'undefined') { %>
+      <% alert.forEach(function(error) { %>
+      <div class="alert" role="alert">
+        <img src="images/icon-error.svg" class="errorIcon" alt="error" />
+        <%= error.msg %>
+      </div>
+      <% }) %>
+      <% } %>
     </div>
-    <% }) %>
-    <% } %>
     <div class="formContainer">
       <form id="form" autocomplete="off" method="post">
-        <input type="text" id="name" name="name" placeholder="Name"
-        value="<%= data.name  %>"><br />
+        <input type="text" id="name" name="name" placeholder="Name" value="<%= data.name  %>"><br />
 
         <input type="text" id="email" name="email" placeholder="Email" value="<%= data.email %>"><br />
         <input type="text" id="subject" name="subject" placeholder="Subject" value="<%= data.subject %>"><br />
