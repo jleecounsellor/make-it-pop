@@ -309,70 +309,6 @@
   font-size: 1.2em;
 }
 
-/* BOOK NOW */
-.container1 {
-  height: 1000px;
-}
-
-.formContainer {
-  border-radius: 5px;
-  background-color: var(--Grey);
-  opacity: 0.8;
-  padding: 30px;
-  width: 500px;
-  height: 580px;
-  margin: 100px auto 30px;
-}
-
-#eventDate, #message {
-  font-family: 'Montserrat', sans-serif;
-}
-
-#name, #email, #subject, #message, #eventDate {
-  padding-left: 20px;
-  margin: 10px 0;
-  background-color: var(--LightGrey);
-  color: var(--Black);
-  font-size: 1em;
-  border-radius: 5px;
-  border-style: none;
-}
-
-#eventDate {
-  margin-left: 10px;
-  padding-left: 10px;
-}
-
-#name, #email, #subject {
-  width: 95%;
-  height: 50px;
-}
-
-#message {
-  width: 92%;
-  padding: 20px;
-  resize: none;
-  font-size: 1em;
-}
-
-input:focus, input:hover, input:checked, #message:focus,#message:hover {
-  outline: 2px auto var(--Peach);
-  outline-offset: -2px;
-}
-
-::placeholder {
-  color: var(--DarkGrey);
-  font-size: 1em;
-}
-
-#submit {
-  color: var(--White);
-  background-color: var(--Purple);
-  border-radius: 5px;
-  padding: 14px 16px;
-  border: none;
-  font-size: 1.2em;
-}
 
 /* MEDIA QUERIES */
 @media (max-width: 1715px) {
@@ -446,10 +382,6 @@ input:focus, input:hover, input:checked, #message:focus,#message:hover {
 
   .yellowDotsImage, .yellowDotsImage2, .yellowDotsImage3 {
     left: 5vw;
-  }
-
-  .formContainer {
-    margin-top: 200px;
   }
 }
 

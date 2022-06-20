@@ -12,7 +12,8 @@
     </div>
     <div class="right">
       <div class="yellowBox2"></div>
-        <iframe class="introImage3" src="https://www.youtube.com/embed/CfBS3j_sW4o" title="Luxury Pastel Balloon Garland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="introImage3" src="https://www.youtube.com/embed/CfBS3j_sW4o" title="Luxury Pastel Balloon Garland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
       <img src="/images/YellowDots.jpg" class="yellowDotsImage" alt="Yellow dots">
       <img src="/images/YellowDots.jpg" class="yellowDotsImage2" alt="Yellow dots">
@@ -20,13 +21,23 @@
     </div>
   </section>
   <section>
+    <% if(typeof alert != 'undefined') { %>
+    <% alert.forEach(function(error) { %>
+    <div class="alert" role="alert">
+      <img src="images/icon-error.svg" class="errorIcon" alt="error" />
+      <%= error.msg %>
+    </div>
+    <% }) %>
+    <% } %>
     <div class="formContainer">
       <form id="form" autocomplete="off" method="post">
-        <input type="text" id="name" name="name" value="" placeholder="Name"><br />
-        <input type="text" id="email" name="email" value="" placeholder="Email"><br />
-        <input type="text" id="subject" name="subject" value="" placeholder="Subject"><br />
+        <input type="text" id="name" name="name" placeholder="Name"
+        value="<%= data.name  %>"><br />
+
+        <input type="text" id="email" name="email" placeholder="Email" value="<%= data.email %>"><br />
+        <input type="text" id="subject" name="subject" placeholder="Subject" value="<%= data.subject %>"><br />
         <label for="date">Event date</label>
-        <input type="date" name="eventDate" value="" id="eventDate">
+        <input type="date" name="eventDate" id="eventDate" value=""><br />
         <p>Product choices</p>
         <input type="radio" name="productChoices" value="Standard Garland" id="standardGarland">
         <label for"standardGarland">Standard Garland</label><br />
@@ -38,8 +49,8 @@
         <label for"rainbowArch">Rainbow Arch</label><br />
         <input type="radio" name="productChoices" value="Balloon Mosaic" id="balloonMosaic">
         <label for"balloonMosaic">Balloon Mosaic</label><br />
-        <textarea name="response" id="message" placeholder="Your Message" value=""></textarea><br />
-        <input type="submit" value="Send" id="submit" rows="15">
+        <textarea name="response" id="message" placeholder="Your Message" value=""><%= data.response %></textarea><br />
+        <button type="submit" id="submit" aria-label="Submit">Send</button>
       </form>
     </div>
   </section>
