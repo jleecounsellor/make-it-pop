@@ -6,13 +6,12 @@ const {
   check,
   validationResult
 } = require("express-validator");
+require("dotenv").config();
+require("./public/js/initDB")();
+
 
 const mongoose = require("mongoose");
 
-
-mongoose.connect("mongodb+srv://jamieleeg:aesBw39YZFnbGvU@cluster0.waagn.mongodb.net/makeitpopDB", {
-  useNewUrlParser: true
-});
 
 //create the schema
 const messageSchema = {
